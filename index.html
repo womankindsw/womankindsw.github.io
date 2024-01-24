@@ -15,6 +15,7 @@
 --dgrey: #666;
 --black: #111;
 --link: #00e;
+--womankindsw: #3d9ccd;
 --visited: purple;
 }
 @font-face {
@@ -176,6 +177,31 @@ th {
     height: 13rem;
     margin-bottom: 0.5rem;
 }
+.btn {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+.blacktxt {
+    color: var(--black);
+}
+.linkbck {
+    background-color: var(--white);
+}
+.linkbck:hover, .linkbck:focus {
+    color: var(--white);
+    background-color: var(--black);
+}
 
 @media only screen and (max-width: 40rem) {
 .topnav a {
@@ -190,6 +216,7 @@ th {
 <body>
 <div class="fullw">
   <div class="container">
+    <p><a href="https://www.eventbrite.co.uk/e/menopause-rediscover-your-mojo-tickets-805700902087" class="btn blacktxt linkbck">Book 'Menopause - Rediscover your Mojo!'</a></p>
     <p><img src="images/womankindwhite.svg" alt="WomanKind" class="logosize"><br>
       <strong>Navigating menopause in the workplace</strong></p>
     <div class="topnav"><a href="#talkstructure">Talk structure</a><a href="#whybook">Why book?</a><a href="#book">Pricing</a><a href="#contact">Contact</a><a href="#whoarewe">Who are we?</a></div>
