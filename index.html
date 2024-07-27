@@ -147,7 +147,7 @@ th {
 }
 .logosize {
     max-width: 26em;
-    margin: 1rem 0;
+    margin: 0 0 0.5em 0;
 }
 .testimonial {
     padding: 1rem;
@@ -187,10 +187,11 @@ th {
     cursor: default;
     display: block;
     border: none;
-    float: left;
     -webkit-appearance: none;
     outline-offset: 2px;
     transition: 0.3s;
+    max-width: 21em;
+    text-align: center;
 }
 .blacktxt {
     color: var(--black);
@@ -202,6 +203,36 @@ th {
     color: var(--white);
     background-color: var(--black);
 }
+.header-img {
+    width: auto;
+    height: 14em;
+    float: right;
+    border-radius: 2em;
+}
+.qrcode-img {
+    width: auto;
+    height: 15em;
+    float: right;
+    border-radius: 2em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 29em 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    width: 100%;
+    margin: 0;
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.div1, .div2 {
+    margin-top: 0;
+    width: 100%;
+}
 
 @media only screen and (max-width: 45rem) {
 .topnav a {
@@ -210,6 +241,26 @@ th {
 .staffquote {
     font-size: 1rem;
 }
+.parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 0;
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.header-img {
+    float: left;
+    margin: 1.5em 0 0.5em 0;
+}
+.qrcode-img {
+    height: 18em;
+    float: left;
+    margin-bottom: 1em;
+}
 }
 </style>
 </head>
@@ -217,8 +268,14 @@ th {
 <div class="fullw">
   <div class="container">
     <p><a href="https://www.eventbrite.co.uk/e/891628363437?aff=oddtdtcreator" class="btn blacktxt linkbck">Book 'Menopause - Rediscover your Mojo!'</a></p>
-    <p><img src="images/womankindwhite.svg" alt="WomanKind" class="logosize"><br>
-      <strong>Navigating menopause in the workplace</strong></p>
+    <div class="parent">
+      <div class="div1">
+        <h2><img src="images/womankindwhite.svg" alt="WomanKind" class="logosize"><br>
+          <strong>Navigating menopause in the workplace</strong></h2>
+        <h2>Group workshops, and 1-1 packages also available</h2>
+      </div>
+      <div class="div2"><img src="images/pat3.jpg" width="600" height="800" alt="" class="header-img"></div>
+    </div>
     <div class="topnav"><a href="#talkstructure">Talk structure</a><a href="#whybook">Why book?</a><a href="#book">Pricing</a><a href="#contact">Contact</a><a href="#whoarewe">Who are we?</a><a href="meno-mojo/index.html">Rediscover your Mojo</a></div>
   </div>
 </div>
@@ -278,8 +335,13 @@ th {
         <span class="iconfont" aria-hidden="true">i</span><a href="https://www.instagram.com/womankind_sw/">womankind_sw</a><br>
       </p>
     </div>
-    <p><a href="https://linktr.ee/womankindsw"><img src="images/womankindswqr.gif" width="208" height="208" alt="WomanKindSW qr code" class="qrcode"><br>
-      https://linktr.ee/womankindsw</a></p>
+    <div class="parent mt-1">
+      <div class="div1">
+        <p><a href="https://linktr.ee/womankindsw"><img src="images/womankindswqr.gif" width="208" height="208" alt="WomanKindSW qr code" class="qrcode"><br>
+          https://linktr.ee/womankindsw</a></p>
+      </div>
+      <div class="div2"><img src="images/pat4.jpg" width="600" height="800" alt="" class="qrcode-img"></div>
+    </div>
     <p>We aim to reply to your inquiry within 24 hours.</p>
     <p>Exeter UK</p>
     <h2 id="whoarewe">Who are we?</h2>
